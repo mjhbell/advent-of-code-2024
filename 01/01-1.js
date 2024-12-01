@@ -35,13 +35,7 @@ function calculateAnswer(){
 
     //Itterate through arrays compiling the answer
     for(var i=0; i<arrayLength; i++){
-        const val1 = array1[i];
-        const val2 = array2[i];
-        if(val1 >= val2){
-            answer = answer + (val1 - val2);
-        }else{
-            answer = answer + (val2 - val1);
-        }
+        answer += Math.abs(array1[i] - array2[i]);
     }
 
     //Return the answer
